@@ -9,6 +9,8 @@ import {
 } from "@material-tailwind/react";
 import { Link } from "react-router-dom";
 import { AiOutlineSearch, AiOutlineShareAlt } from "react-icons/ai";
+import SearchDialog from "../searchDialog/SearchDialog";
+import ShareDialogBox from "../shareDialogBox/ShareDialogBox";
 
 const Nav = () => {
   const [openNav, setOpenNav] = useState(false);
@@ -83,11 +85,11 @@ const Nav = () => {
             <div className="hidden lg:block">{navlist}</div>
             {/*Search Icon*/}
             <div>
-              <AiOutlineSearch size={20} color="white" />
+              <SearchDialog />
             </div>
             {/*Share Icon*/}
             <div className="hidden lg:block">
-              <AiOutlineShareAlt size={20} color="white" />
+              <ShareDialogBox />
             </div>
             {/*Admin Profile Pic*/}
             <div>
