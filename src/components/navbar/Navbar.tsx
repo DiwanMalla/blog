@@ -8,7 +8,7 @@ import {
   Typography,
 } from "@material-tailwind/react";
 import { Link } from "react-router-dom";
-import { AiOutlineSearch, AiOutlineShareAlt } from "react-icons/ai";
+
 import SearchDialog from "../searchDialog/SearchDialog";
 import ShareDialogBox from "../shareDialogBox/ShareDialogBox";
 

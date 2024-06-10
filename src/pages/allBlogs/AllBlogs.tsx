@@ -4,35 +4,74 @@ import Layout from "../../components/layout/Layout";
 
 const AllBlogs = () => {
   const context = useContext(myContext);
-  const { mdoe } = context;
+  const { mode } = context;
   return (
     <Layout>
-      <section>
-        <div>
+      <section className="text-gray-600 body-font">
+        <div className="container px-5 py-10 mx-auto max-w-7xl">
           {/*Top Heading*/}
-          <div>
-            <h1>All Blogs</h1>
+          <div className="mb-5">
+            <h1
+              className="text-center text-2xl font-bold"
+              style={{ color: mode === "dark" ? "white" : "black" }}
+            >
+              All Blogs
+            </h1>
           </div>
           {/*Main Content*/}
-          <div>
+          <div className="flex flex-wrap justify-center -m-4 mb-5">
             {/*Card 1*/}
-            <div>
-              <div>
+            <div className="p-4 md:w-1/3">
+              <div
+                style={{
+                  background: mode === "dark" ? "rgb(30,41,59" : "white",
+                  borderBottom:
+                    mode === "dark"
+                      ? "4px solid rgb(226,232,240)"
+                      : "4px solid rgb(30,41,59",
+                }}
+                className={`h-full shadow-lg hover:-translate-y-1 cursor-pointer hover:shadow-gray-400 ${
+                  mode === "dark" ? "shadow-gray-700" : "shadow-xl"
+                } rounded-xl overflow-hidden`}
+              >
                 {/*Blog Thumbnail*/}
                 <img
+                  className="w-full"
                   src={
                     "https://firebasestorage.googleapis.com/v0/b/blog-fea71.appspot.com/o/blogimage%2FReact%20Introduction.png?alt=media&token=1ba7496b-2cbc-450c-ab1a-57e19882dc76"
                   }
                   alt="blog"
                 />
                 {/*Top Items*/}
-                <div>
+                <div className="p-6">
                   {/*Blog Date*/}
-                  <h2>{"9 June 2024"}</h2>
+                  <h2
+                    className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1"
+                    style={{
+                      color:
+                        mode === "dark" ? "rgb(226,232,240)" : "rgb(30,41,59)",
+                    }}
+                  >
+                    {"9 June 2024"}
+                  </h2>
                   {/*Blog Title*/}
-                  <h1>{"React Project"}</h1>
+                  <h1
+                    className="title-font text-lg font-bold text-gray-900 mb-3"
+                    style={{
+                      color:
+                        mode === "dark" ? "rgb(226,232,240)" : "rgb(30,41,59)",
+                    }}
+                  >
+                    {"React Project"}
+                  </h1>
                   {/*Blog Description*/}
-                  <p>
+                  <p
+                    className="leading-relaxed mb-3"
+                    style={{
+                      color:
+                        mode === "dark" ? "rgb(226,232,240)" : "rgb(30,41,59)",
+                    }}
+                  >
                     I dont know how to remember this but gonna be crazy fun to
                     learn all new things
                   </p>
@@ -40,17 +79,119 @@ const AllBlogs = () => {
               </div>
             </div>
             {/*Card 2*/}
-            <div>
-              <div>
+            <div className="p-4 md:w-1/3">
+              <div
+                style={{
+                  background: mode === "dark" ? "rgb(30,41,59" : "white",
+                  borderBottom:
+                    mode === "dark"
+                      ? "4px solid rgb(226,232,240)"
+                      : "4px solid rgb(30,41,59",
+                }}
+                className={`h-full rounded-lg shadow-lg hover:-translate-y-1 cursor-pointer hover:shadow-gray-400 ${
+                  mode === "dark" ? "shadow-gray-700" : "shadow-xl"
+                } overflow-hidden`}
+              >
                 {/*Blog Thumbnails*/}
                 <img
+                  className="w-full"
                   src={
                     "https://firebasestorage.googleapis.com/v0/b/blog-fea71.appspot.com/o/blogimage%2FReact%20Introduction.png?alt=media&token=1ba7496b-2cbc-450c-ab1a-57e19882dc76"
                   }
                   alt="blogs"
                 />
                 {/* Top items*/}
-                <div>{/*Blog Date*/}</div>
+                <div className="p-6">
+                  {/*Blog Date*/}
+                  <h2
+                    className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1"
+                    style={{
+                      color:
+                        mode === "dark" ? "rgb(226,232,240" : "rgb(30,41,59",
+                    }}
+                  >
+                    {"9 June 2024"}
+                  </h2>
+                  {/*Blog Title*/}
+                  <h1
+                    className="title-font text-lg font-bold text-gray-900 mb-3"
+                    style={{
+                      color:
+                        mode === "dark" ? "rgb(226,232,240)" : "rgb(30,41,59)",
+                    }}
+                  >
+                    {"React Project"}
+                  </h1>
+                  {/*Blog Description*/}
+                  <p
+                    className="leading-relaxed mb-3"
+                    style={{
+                      color:
+                        mode === "dark" ? "rgb(226,232,240)" : "rgb(30,41,59)",
+                    }}
+                  >
+                    I dont know how to remember this but gonna be crazy fun to
+                    learn all new things
+                  </p>
+                </div>
+              </div>
+            </div>
+            {/*Card 3*/}
+            <div className="p-4 md:w-1/3">
+              <div
+                style={{
+                  background: mode === "dark" ? "rgb(30,41,59)" : "white",
+                  borderBottom:
+                    mode === "dark"
+                      ? "4px solid rgb(226,232,240)"
+                      : "4px solid rgb(30,41,59)",
+                }}
+                className={`h-full shadow-lg rounded-lg overflow-hidden hover:-translate-y-1 cursor-pointer hover:shadow-gray-400 ${
+                  mode === "dark" ? "shadow-gray-700" : "shadow-xl"
+                }`}
+              >
+                {/*Blog Thumbnails*/}
+                <img
+                  className="w-full"
+                  src={
+                    "https://firebasestorage.googleapis.com/v0/b/blog-fea71.appspot.com/o/blogimage%2FReact%20Introduction.png?alt=media&token=1ba7496b-2cbc-450c-ab1a-57e19882dc76"
+                  }
+                  alt="blog"
+                />
+                {/*Top Items*/}
+                <div className="p-6">
+                  {/*Blog Date*/}
+                  <h2
+                    className="tracking-widest text-xs title-font font-medium text-gray-400 mb-1"
+                    style={{
+                      color:
+                        mode === "dark" ? "rgb(226,232,240)" : "rgb(30,41,59)",
+                    }}
+                  >
+                    {"9 June 2024"}
+                  </h2>
+                  {/*Blog Title*/}
+                  <h1
+                    className="title-font font-bold text-lg text-gray-900 mb-3"
+                    style={{
+                      color:
+                        mode === "dark" ? "rgb(226,232,240)" : "rgb(30,41,59)",
+                    }}
+                  >
+                    {"React Project"}
+                  </h1>
+                  {/*Blog Description*/}
+                  <p
+                    className="leading-relaxed mb-3"
+                    style={{
+                      color:
+                        mode === "dark" ? "rgb(226,232,240)" : "rgb(30,41,59)",
+                    }}
+                  >
+                    I dont know how to remember this but gonna be crazy fun to
+                    learn all new things
+                  </p>
+                </div>
               </div>
             </div>
           </div>
